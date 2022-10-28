@@ -1,0 +1,12 @@
+unit ConsultaCEP;
+
+interface
+
+uses
+  Data.DB, System.SysUtils, Data.Win.ADODB, Datasnap.DBClient, Rest.Json,
+  System.Classes, Math, System.JSON, REST.Client, uServices, JsonToObject,
+  System.DateUtils;
+
+implementation
+
+end.

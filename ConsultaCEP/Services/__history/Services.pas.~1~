@@ -1,0 +1,34 @@
+unit uServices;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
+  FireDAC.DApt.Intf, IPPeerClient, REST.Client, REST.Response.Adapter, Data.DB,
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client, Data.Bind.Components,
+  Data.Bind.ObjectScope;
+
+type
+  TFrmServices = class(TForm)
+    DataSource1: TDataSource;
+    RESTResponse1: TRESTResponse;
+    FDMemTable1: TFDMemTable;
+    RESTResponseDataSetAdapter1: TRESTResponseDataSetAdapter;
+    RESTClient1: TRESTClient;
+    RESTRequest1: TRESTRequest;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmServices: TFrmServices;
+
+implementation
+
+{$R *.dfm}
+
+end.

@@ -1,0 +1,81 @@
+unit ConsultaCEP;
+
+interface
+
+uses
+  Data.DB, System.SysUtils, Data.Win.ADODB, Datasnap.DBClient, Rest.Json,
+  System.Classes, Math, System.JSON, REST.Client, Services, JsonToObject,
+  System.DateUtils;
+
+  type
+  TConsultaCEP = class
+  public
+    ResultadoPesquisa: TClientDataSet;
+    function GeraRequisicao(Cep:String): Boolean;
+    constructor Create;
+    destructor Destroy; override;
+  end;
+
+implementation
+
+{ TConsultaCEP }
+
+constructor TConsultaCEP.Create;
+begin
+  ResultadoPesquisa :=  TClientDataSet.Create(nil);
+  ResultadoPesquisa.Close;
+  ResultadoPesquisa.FieldDefs.Clear;
+  ResultadoPesquisa.FieldDefs.Add('logradouro',ftString,50);
+  ResultadoPesquisa.FieldDefs.Add('complemento',ftString,50);
+  ResultadoPesquisa.FieldDefs.Add('bairro',ftString,50);
+  ResultadoPesquisa.FieldDefs.Add('localidade',ftString,50);
+  ResultadoPesquisa.FieldDefs.Add('uf',ftString,2);
+  ResultadoPesquisa.FieldDefs.Add('ibge',ftString,50);
+  ResultadoPesquisa.CreateDataSet;
+end;
+
+destructor TConsultaCEP.Destroy;
+begin
+  ResultadoPesquisa.Free;
+  inherited;
+end;
+
+function TConsultaCEP.GeraRequisicao(Cep: String): Boolean;
+var
+ RetornoRequisicao : TRetornoConsultaCEP;
+begin
+  FrmServices := TFrmServices.Create(nil);
+  RetornoRequisicao := TRetornoConsultaCEP.Create;
+  try
+    FrmServices.Client.BaseURL := URL_CONSULTA+Cep+'/json/';
+    FrmServices.Request.Execute;
+
+    if FrmServices.Request.Response.StatusCode = 200 then
+    begin
+      RetornoRequisicao := TJson.JsonToObject<TRetornoConsultaCEP>(FrmServices.Request.Response.JSONText);
+
+      if ResultadoPesquisa.Active = False then
+        ResultadoPesquisa.Active := True;
+
+      ResultadoPesquisa.Append;
+      ResultadoPesquisa.FieldByName('logradouro').AsString  := RetornoRequisicao.Logradouro;
+      ResultadoPesquisa.FieldByName('complemento').AsString := RetornoRequisicao.Complemento;
+      ResultadoPesquisa.FieldByName('bairro').AsString      := RetornoRequisicao.Bairro;
+      ResultadoPesquisa.FieldByName('localidade').AsString  := RetornoRequisicao.Localidade;
+      ResultadoPesquisa.FieldByName('uf').AsString          := RetornoRequisicao.Uf;
+      ResultadoPesquisa.FieldByName('ibge').AsString        := RetornoRequisicao.Ibge;
+      ResultadoPesquisa.Post;
+
+      Result := True;
+    end
+    else
+      Result := False;
+
+
+  finally
+    FreeAndNil(RetornoRequisicao);
+    FreeAndNil(FrmServices);
+  end;
+end;
+
+end.

@@ -1,0 +1,68 @@
+unit ConsultaCepDTO;
+
+interface
+
+uses
+  Data.DB, System.SysUtils, Data.Win.ADODB, Datasnap.DBClient, ConsultaCEP;
+
+  type
+  TConsultaCepDTO = Class
+  private
+    FConsultaCEP: TConsultaCEP;
+    FResultadoPesquisaDTO: TClientDataSet;
+    procedure SetConsultaCEP(const Value: TConsultaCEP);
+  public
+
+    procedure GeraRequisicao(Cep:String);
+    property ConsultaCEP : TConsultaCEP read FConsultaCEP write SetConsultaCEP;
+    property ResultadoPesquisaDTO: TClientDataSet read FResultadoPesquisaDTO write FResultadoPesquisaDTO;
+
+    constructor Create;
+    destructor Destroy; override;
+  end;
+
+implementation
+
+{ TConsultaCepDTO }
+
+constructor TConsultaCepDTO.Create;
+begin
+  ResultadoPesquisaDTO :=  TClientDataSet.Create(nil);
+  ResultadoPesquisaDTO.Close;
+  ResultadoPesquisaDTO.FieldDefs.Clear;
+  ResultadoPesquisaDTO.FieldDefs.Add('logradouro');
+  ResultadoPesquisaDTO.FieldDefs.Add('numero');
+  ResultadoPesquisaDTO.FieldDefs.Add('complemento');
+  ResultadoPesquisaDTO.FieldDefs.Add('bairro');
+  ResultadoPesquisaDTO.FieldDefs.Add('localidade');
+  ResultadoPesquisaDTO.FieldDefs.Add('uf');
+  ResultadoPesquisaDTO.FieldDefs.Add('ibge');
+  ResultadoPesquisaDTO.CreateDataSet;
+
+  ConsultaCEP := TConsultaCEP.Create;
+  inherited Create;
+end;
+
+destructor TConsultaCepDTO.Destroy;
+begin
+  FreeAndNil(ResultadoPesquisaDTO);
+  ConsultaCEP.Free;
+  inherited Destroy;
+end;
+
+procedure TConsultaCepDTO.GeraRequisicao(Cep: String);
+begin
+  if not ConsultaCEP.GeraRequisicao(Cep) then
+    raise Exception.Create('Endereço não encontrado!');
+
+  if ResultadoPesquisaDTO.Active = False then
+        ResultadoPesquisaDTO.Active := True;
+  ResultadoPesquisaDTO.Data := ConsultaCEP.ResultadoPesquisa;
+end;
+
+procedure TConsultaCepDTO.SetConsultaCEP(const Value: TConsultaCEP);
+begin
+  FConsultaCEP := Value;
+end;
+
+end.

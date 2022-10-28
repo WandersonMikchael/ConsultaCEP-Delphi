@@ -1,0 +1,54 @@
+unit uConsultaCorreios;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, IPPeerClient, FireDAC.Stan.Intf,
+  FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS,
+  FireDAC.Phys.Intf, FireDAC.DApt.Intf, Data.DB, Vcl.Buttons, Vcl.StdCtrls,
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client, REST.Response.Adapter, REST.Client,
+  Data.Bind.Components, Data.Bind.ObjectScope, Vcl.ExtCtrls;
+
+type
+  TFrmConsultaCorreios = class(TForm)
+    pnlPrincipal: TPanel;
+    RESTClient1: TRESTClient;
+    RESTRequest1: TRESTRequest;
+    RESTResponse1: TRESTResponse;
+    RESTResponseDataSetAdapter1: TRESTResponseDataSetAdapter;
+    FDMemTable1: TFDMemTable;
+    lblTitulo: TLabel;
+    edtCEP: TEdit;
+    btnConsultaCEP: TSpeedButton;
+    DataSource1: TDataSource;
+    edtLogradouro: TEdit;
+    edtNumero: TEdit;
+    edtComplemento: TEdit;
+    edtMunicipio: TEdit;
+    edtUF: TEdit;
+    edtBairro: TEdit;
+    edtIBGE: TEdit;
+    lblLogradouro: TLabel;
+    lblNumero: TLabel;
+    lblComplemento: TLabel;
+    lblBairro: TLabel;
+    lblMunicipio: TLabel;
+    lblUF: TLabel;
+    lblIBGE: TLabel;
+    lblCep: TLabel;
+    btnLimpar: TSpeedButton;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmConsultaCorreios: TFrmConsultaCorreios;
+
+implementation
+
+{$R *.dfm}
+
+end.

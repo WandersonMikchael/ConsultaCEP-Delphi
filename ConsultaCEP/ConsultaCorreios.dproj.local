@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/10/13 10:30:27.000.760,=C:\Users\wanderson.gomes\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/28 10:29:11.831,=C:\Users\wanderson.gomes\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/28 10:51:49.536,C:\Users\wanderson.gomes\Documents\Repositorio - Projetos pessoais\ConsultaCEP\View\uConsultaCorreios.pas=C:\Users\wanderson.gomes\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/28 10:51:49.536,C:\Users\wanderson.gomes\Documents\Repositorio - Projetos pessoais\ConsultaCEP\View\uConsultaCorreios.dfm=C:\Users\wanderson.gomes\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/10/28 10:51:58.577,C:\Users\wanderson.gomes\Documents\Repositorio - Projetos pessoais\ConsultaCEP\ConsultaCorreios.dproj=C:\Users\wanderson.gomes\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2022/10/28 11:08:43.994,=C:\Users\wanderson.gomes\Documents\Repositorio - Projetos pessoais\ConsultaCEP\Unit1.pas</Transaction>
+    <Transaction>2022/10/28 11:08:52.671,=C:\Users\wanderson.gomes\Documents\Repositorio - Projetos pessoais\ConsultaCEP\Unit2.pas</Transaction>
+    <Transaction>2022/10/28 11:11:03.161,C:\Users\wanderson.gomes\Documents\Repositorio - Projetos pessoais\ConsultaCEP\Services\uServices.dfm=C:\Users\wanderson.gomes\Documents\Repositorio - Projetos pessoais\ConsultaCEP\Unit2.dfm</Transaction>
+    <Transaction>2022/10/28 11:11:03.161,C:\Users\wanderson.gomes\Documents\Repositorio - Projetos pessoais\ConsultaCEP\Services\uServices.pas=C:\Users\wanderson.gomes\Documents\Repositorio - Projetos pessoais\ConsultaCEP\Unit2.pas</Transaction>
+    <Transaction>2022/10/28 11:13:47.664,C:\Users\wanderson.gomes\Documents\Repositorio - Projetos pessoais\ConsultaCEP\Model\ConsultaCEP.pas=C:\Users\wanderson.gomes\Documents\Repositorio - Projetos pessoais\ConsultaCEP\Unit1.pas</Transaction>
+    <Transaction>2022/10/28 11:14:16.852,=C:\Users\wanderson.gomes\Documents\Repositorio - Projetos pessoais\ConsultaCEP\Unit1.pas</Transaction>
+    <Transaction>2022/10/28 11:18:29.444,C:\Users\wanderson.gomes\Documents\Repositorio - Projetos pessoais\ConsultaCEP\Model\uJsonToObject.pas=C:\Users\wanderson.gomes\Documents\Repositorio - Projetos pessoais\ConsultaCEP\Unit1.pas</Transaction>
+    <Transaction>2022/10/28 11:18:54.090,=C:\Users\wanderson.gomes\Documents\Repositorio - Projetos pessoais\ConsultaCEP\Unit1.pas</Transaction>
+    <Transaction>2022/10/28 11:19:14.228,C:\Users\wanderson.gomes\Documents\Repositorio - Projetos pessoais\ConsultaCEP\Controller\uConsultaCepDTO.pas=C:\Users\wanderson.gomes\Documents\Repositorio - Projetos pessoais\ConsultaCEP\Unit1.pas</Transaction>
+    <Transaction>2022/10/28 12:11:47.342,=C:\Users\wanderson.gomes\Documents\Repositorio - Projetos pessoais\ConsultaCEP\Unit1.pas</Transaction>
+    <Transaction>2022/10/28 12:17:10.351,C:\Users\wanderson.gomes\Documents\Repositorio - Projetos pessoais\ConsultaCEP\Utils\Utils.pas=C:\Users\wanderson.gomes\Documents\Repositorio - Projetos pessoais\ConsultaCEP\Unit1.pas</Transaction>
+    <Transaction>2022/10/28 12:17:17.114,C:\Users\wanderson.gomes\Documents\Repositorio - Projetos pessoais\ConsultaCEP\Controller\ConsultaCepDTO.pas=C:\Users\wanderson.gomes\Documents\Repositorio - Projetos pessoais\ConsultaCEP\Controller\uConsultaCepDTO.pas</Transaction>
+    <Transaction>2022/10/28 12:17:21.817,C:\Users\wanderson.gomes\Documents\Repositorio - Projetos pessoais\ConsultaCEP\Model\JsonToObject.pas=C:\Users\wanderson.gomes\Documents\Repositorio - Projetos pessoais\ConsultaCEP\Model\uJsonToObject.pas</Transaction>
+    <Transaction>2022/10/28 12:17:27.242,C:\Users\wanderson.gomes\Documents\Repositorio - Projetos pessoais\ConsultaCEP\Services\Services.dfm=C:\Users\wanderson.gomes\Documents\Repositorio - Projetos pessoais\ConsultaCEP\Services\uServices.dfm</Transaction>
+    <Transaction>2022/10/28 12:17:27.242,C:\Users\wanderson.gomes\Documents\Repositorio - Projetos pessoais\ConsultaCEP\Services\Services.pas=C:\Users\wanderson.gomes\Documents\Repositorio - Projetos pessoais\ConsultaCEP\Services\uServices.pas</Transaction>
+    <Transaction>2022/10/28 12:17:35.313,C:\Users\wanderson.gomes\Documents\Repositorio - Projetos pessoais\ConsultaCEP\View\ConsultaCorreios.dfm=C:\Users\wanderson.gomes\Documents\Repositorio - Projetos pessoais\ConsultaCEP\View\uConsultaCorreios.dfm</Transaction>
+    <Transaction>2022/10/28 12:17:35.313,C:\Users\wanderson.gomes\Documents\Repositorio - Projetos pessoais\ConsultaCEP\View\ConsultaCorreios.pas=C:\Users\wanderson.gomes\Documents\Repositorio - Projetos pessoais\ConsultaCEP\View\uConsultaCorreios.pas</Transaction>
+    <Transaction>2022/10/28 12:27:17.051,C:\Users\wanderson.gomes\Documents\Repositorio - Projetos pessoais\ConsultaCEP\View\ConsultarCorreios.pas=C:\Users\wanderson.gomes\Documents\Repositorio - Projetos pessoais\ConsultaCEP\View\ConsultaCorreios.pas</Transaction>
+    <Transaction>2022/10/28 12:27:17.051,C:\Users\wanderson.gomes\Documents\Repositorio - Projetos pessoais\ConsultaCEP\View\ConsultarCorreios.dfm=C:\Users\wanderson.gomes\Documents\Repositorio - Projetos pessoais\ConsultaCEP\View\ConsultaCorreios.dfm</Transaction>
+    <Transaction>2022/10/28 12:47:48.829,=C:\Users\wanderson.gomes\Documents\Repositorio - Projetos pessoais\ConsultaCEP\correios.ico</Transaction>
+  </Transactions>
+</BorlandProject>
